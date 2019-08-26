@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="d-flex flex-column" *ngIf="post">
+    <div class="card mb-2">
+      <div class="card-header">
+        <h5>Post</h5>
+      </div>
+      <div class="card-body">
+        <div class="d-flex">
+          <span class="px-2">ID: </span>
+          {{post.id}}
+        </div>
+        <div class="d-flex">
+            <span class="px-2">User ID: </span>
+            {{post.userId}}
+          </div>
+        <div class="d-flex">
+          <span class="px-2">Title: </span>
+          {{post.title}}
+        </div>
+        <div class="d-flex">
+          <span class="px-2">Body: </span>
+          {{post.body}}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

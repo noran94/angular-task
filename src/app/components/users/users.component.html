@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="card">
+    <div class="card-header">
+      <h5>USERS</h5>
+    </div>
+    <div class="card-body">
+      <input name="filter" class="form-control" placeholder="search by name" [(ngModel)]="filter">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Phone</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="tr-pointer" *ngFor="let data of users | filter: filter: 'name'" (click)="getUserDetails(data)">
+            <th scope="row">{{data.id}}</th>
+            <td>{{data.name}}</td>
+            <td>{{data.email}}</td>
+            <td>{{data.phone}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

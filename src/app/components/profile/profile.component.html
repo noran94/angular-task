@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="d-flex flex-wrap">
+    <div class="col-md-6 col-12">
+        <app-posts *ngIf="user" [userId]="user.id"></app-posts>
+    </div>
+    <div class="col-md-6 col-12">
+        <app-todos *ngIf="user" [userId]="user.id"></app-todos>
+
+      <!-- <div class="card-header">
+        <h5>ToDo List</h5>
+      </div>
+      <div *ngIf="toDos" class="card-body d-flex flex-column">
+        <div><span>ID: </span>{{toDos.id}}</div>
+        <div><span>Title: </span>{{toDos.title}}</div>
+        <div><span>Completed: </span>{{toDos.completed}}</div>
+      </div> -->
+    </div>
+  </div>
+</div>

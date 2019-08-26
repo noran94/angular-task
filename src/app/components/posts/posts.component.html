@@ -1,0 +1,28 @@
+<div [ngClass]="{'container': !userId}">
+  <div class="card">
+    <div class="card-header">
+      <h5>POSTS</h5>
+    </div>
+    <div class="card-body">
+      <input name="filter" class="form-control" placeholder="search by title" [(ngModel)]="filter">
+      <div class="posts">
+        <table class="table table-striped" *ngIf="posts">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Title</th>
+              <th *ngIf="!userId" scope="col">UserId</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="tr-pointer" *ngFor="let data of posts | filter:filter:'title'" (click)="getPostDetails(data)">
+              <th scope="row">{{data.id}}</th>
+              <td>{{data.title}}</td>
+              <td *ngIf="!userId">{{data.userId}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

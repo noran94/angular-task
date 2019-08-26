@@ -1,0 +1,32 @@
+<div class="card">
+  <div class="card-header">
+    <h5>ToDo List</h5>
+  </div>
+  <div class="card-body">
+    <input name="filter" class="form-control" placeholder="search by title" [(ngModel)]="filter">
+    <div class="todos">
+      <table class="table table-striped" *ngIf="todos">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Title</th>
+            <th scope="col" class="d-flex">Completed <i class="fas fa-sort align-self-center" (click)="sort = !sort"></i></th>
+            <th scope="col">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let data of todos | filter:filter:'title' | orderBy: 'completed': sort">
+            <td>{{data.id}}</td>
+            <td>{{data.title}}</td>
+            <td>{{data.completed}}</td>
+            <td>
+              <a class="tr-pointer" (click)="changeCompleted(data.id, !data.completed)">
+                <i [ngClass]="data.completed? 'fa fa-times':'fas fa-check' "></i>
+              </a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

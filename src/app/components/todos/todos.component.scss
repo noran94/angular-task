@@ -1,0 +1,9 @@
+.card-body{
+    max-height: 484px;
+    overflow: scroll;
+    overflow-x: hidden;
+    padding: 0px;
+    .tr-pointer{
+        cursor: pointer;
+    }
+}

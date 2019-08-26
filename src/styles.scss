@@ -1,1 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
+h5 {
+    margin-bottom: 0 !important;
+}
+
+.card-body {
+    span {
+        font-weight: 600;
+    }
+}
+
+.tr-pointer{
+    cursor: pointer;
+}

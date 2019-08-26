@@ -1,0 +1,68 @@
+<div class="container">
+  <div class="d-flex flex-column" *ngIf="user">
+    <div class="card mb-2">
+      <div class="card-header">
+        <h5>User</h5>
+      </div>
+      <div class="card-body">
+        <div class="d-flex">
+          <span class="px-2">ID: </span>
+          {{user.id}}
+        </div>
+        <div class="d-flex">
+          <span class="px-2">Name: </span>
+          {{user.name}}
+        </div>
+        <div class="d-flex">
+          <span class="px-2">Phone: </span>
+          {{user.phone}}
+        </div>
+        <div class="d-flex">
+          <span class="px-2">User Name: </span>
+          {{user.username}}
+        </div>
+        <div class="d-flex">
+          <span class="px-2">Website: </span>
+          {{user.website}}
+        </div>
+      </div>
+    </div>
+
+    <div class="card mb-2">
+      <div class="card-header">
+        <h5>Company</h5>
+      </div>
+      <div class="card-body">
+        <div class="d-flex">
+          <span class="px-2">Name: </span> {{user.company.name}}
+        </div>
+        <div class="d-flex">
+          <span class="px-2">BS: </span>{{user.company.bs}}
+        </div>
+        <div class="d-flex">
+          <span class="px-2">Catch Phrase: </span>{{user.company.catchPhrase}}
+        </div>
+      </div>
+    </div>
+
+    <div class="card mb-2">
+      <div class="card-header">
+        <h5>Address</h5>
+      </div>
+      <div class="card-body">
+        <div class="d-flex">
+          <span class="px-2">City: </span>{{user.address.city}}
+        </div>
+        <div class="d-flex">
+          <span class="px-2">Street: </span>{{user.address.street}}
+        </div>
+        <div class="d-flex">
+          <span class="px-2">Suite: </span>{{user.address.suite}}
+        </div>
+        <div class="d-flex">
+          <span class="px-2">Zip Code: </span>{{user.address.zipcode}}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
